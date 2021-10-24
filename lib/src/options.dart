@@ -27,7 +27,7 @@ class DygraphOptions {
     String axisLineColor,
     num axisLineWidth,
     num axisTickSize,
-    List dateWindow,
+    List? dateWindow,
     bool drawAxesAtZero,
     bool drawAxis,
     bool includeZero,
@@ -52,7 +52,7 @@ class DygraphOptions {
     PointClickCallbackFunc pointClickCallback,
     UnderlayCallbackFunc underlayCallback,
     GenericEventCallbackFunc unhighlightCallback,
-    ZoomCallbackFunc zoomCallback,
+    ZoomCallbackFunc? zoomCallback,
     String title,
     num titleHeight,
     num xLabelHeight,
@@ -83,7 +83,7 @@ class DygraphOptions {
     String color,
     double colorSaturation,
     double colorValue,
-    List colors,
+    List? colors,
     double fillAlpha,
     String timingName,
     int rollPeriod,
@@ -99,7 +99,7 @@ class DygraphOptions {
     num highlightSeriesBackgroundAlpha,
     String highlightSeriesBackgroundColor,
     DygraphOptions highlightSeriesOpts,
-    DygraphInteractionModel interactionModel,
+    DygraphInteractionModel? interactionModel,
     bool showLabelsOnHighlight,
     bool showRoller,
     List labels,
@@ -223,8 +223,8 @@ class DygraphOptions {
   /// If the data for the x-axis is numeric, the values in dateWindow must also be numbers.
   ///
   /// Default: Full range of the input is shown
-  external List<num> get dateWindow;
-  external set dateWindow(List<num> v);
+  external List<num>? get dateWindow;
+  external set dateWindow(List<num>? v);
 
   /// When set, draw the X axis at the Y=0 position and the Y axis at the X=0 position if those positions are inside the graph's visible area.
   /// Otherwise, draw the axes at the bottom or left graph edge as usual.
@@ -418,8 +418,8 @@ class DygraphOptions {
   /// the transition (it will not be called for intermediate frames).
   ///
   /// Default: `null`
-  external ZoomCallbackFunc get zoomCallback;
-  external set zoomCallback(ZoomCallbackFunc v);
+  external ZoomCallbackFunc? get zoomCallback;
+  external set zoomCallback(ZoomCallbackFunc? v);
 
   /* Chart labels
   --------------------------------------------------------------------------- */
@@ -691,8 +691,8 @@ class DygraphOptions {
   /// Overridden by the 'color' option.
   ///
   /// Default: (see description)
-  external List get colors;
-  external set colors(List v);
+  external List? get colors;
+  external set colors(List? v);
 
   /// Error bars (or custom bars) for each series are drawn in the same color as
   /// the series, but with partial transparency. This sets the transparency.
@@ -824,8 +824,8 @@ class DygraphOptions {
   /// See http://dygraphs.com/gallery/#g/interaction
   ///
   /// Default: (none)
-  external DygraphInteractionModel get interactionModel;
-  external set interactionModel(DygraphInteractionModel v);
+  external DygraphInteractionModel? get interactionModel;
+  external set interactionModel(DygraphInteractionModel? v);
 
   /// Whether to show the legend upon mouseover.
   ///
@@ -850,8 +850,8 @@ class DygraphOptions {
   /// If it is not, default values are supplied and a warning is logged.
   ///
   /// Default: `['X', 'Y1', 'Y2', ...]`
-  external List<String> get labels;
-  external set labels(List<String> v);
+  external List<String>? get labels;
+  external set labels(List<String>? v);
 
   /// Show data labels in an external div, rather than on the graph.
   /// This value can either be a div element or a div id.

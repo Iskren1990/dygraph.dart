@@ -367,7 +367,7 @@ class Dygraph {
   ///
   /// There's a huge variety of options that can be passed to this method.
   /// For a full list, see http://dygraphs.com/options.html.
-  external void updateOptions(DygraphOptions options, [bool blockRedraw]);
+  external void updateOptions(DygraphOptions options, [bool? blockRedraw]);
 
   /// Returns a boolean array of visibility statuses.
   external List visibility();
